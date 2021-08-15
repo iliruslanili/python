@@ -2,7 +2,7 @@
 # Считаем 3 + 33 + 333 = 369.
 
 try:  # Защита от ввода не числа
-    val = int(input('Введите число: '))
-    print(val + val * 11 + val * 111)
+    val = input('Введите число: ')
+    print(int(val) + int(val*2) + int(val*3))
 except:
     print('Введите корректное число')
