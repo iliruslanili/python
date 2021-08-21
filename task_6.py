@@ -31,13 +31,13 @@ while not stop:
 
 pprint(products)
 
-reformatted = {'Название': [],
-               'Цена': [],
-               'Количество': []}
+reformatted = {'Название': set(),
+               'Цена': set(),
+               'Количество': set()}
 
 for product in products:
-    reformatted['Название'].append(product[1]['Название'])
-    reformatted['Цена'].append(product[1]['Цена'])
-    reformatted['Количество'].append(product[1]['Количество'])
+    reformatted['Название'].add(product[1]['Название'])
+    reformatted['Цена'].add(product[1]['Цена'])
+    reformatted['Количество'].add(product[1]['Количество'])
 
 pprint(reformatted)

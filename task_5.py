@@ -9,8 +9,21 @@
 values = [7, 5, 3, 3, 2]
 print(f'Исходный список: {values}')
 val = input('Введите число либо end для остановки программы: ')
-while val != 'end':
+
+# Ленивый вариант
+# while val != 'end':
+#     values.append(int(val))
+#     values.sort(reverse=True)       # Да, да, такое решение не очень эффективно при разрастании списка
+#     val = input('Введите число либо end для остановки программы: ')
+# print(values)
+
+is_inserted = False
+if val != 'end':
+    for i in range(len(values)):
+        if int(val) > values[i]:
+            values.insert(i, int(val))
+            is_inserted = True
+            break
+if not is_inserted:
     values.append(int(val))
-    values.sort()       # Да, да, такое решение не очень эффективно при разрастании списка
-    val = input('Введите число либо end для остановки программы: ')
 print(values)
