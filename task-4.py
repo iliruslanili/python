@@ -2,10 +2,6 @@ import math
 
 
 def custom_pow(arg1: int, arg2: int) -> float:
-    return arg1 ** arg2
-
-
-def custom_pow(arg1: int, arg2: int) -> float:
     x = 1
     for _ in range(abs(arg2)):
         x *= arg1
