@@ -1,3 +1,6 @@
+import math
+
+
 def custom_pow(arg1: int, arg2: int) -> float:
     return arg1 ** arg2
 
@@ -9,6 +12,12 @@ def custom_pow(arg1: int, arg2: int) -> float:
     return float(x) if arg2 >= 0 else 1 / x
 
 
-x, y = 2, 0
-print(x ** y)
-print(custom_pow(x, y))
+def custom_pow_log(arg1: int, arg2: int) -> float:
+    p = math.exp(arg2 * math.log(arg1))
+    return p
+
+
+x, y = 2, -2
+print(x ** y)  # 0.25
+print(custom_pow(x, y))  #0.25
+print(custom_pow_log(x, y))  # 0.25
